@@ -1,56 +1,55 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Khai phát triển cơ sở</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      body, html, #root {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
-        background-color: #111827; /* gray-900 */
-      }
-      
-      /* Custom Scrollbar for Webkit (Chrome, Safari, Edge) */
-      ::-webkit-scrollbar {
-        width: 6px;
-        height: 6px;
-      }
-      
-      ::-webkit-scrollbar-track {
-        background: transparent; 
-      }
-      
-      ::-webkit-scrollbar-thumb {
-        background-color: #374151; /* gray-700 */
-        border-radius: 9999px;
-      }
-      
-      ::-webkit-scrollbar-thumb:hover {
-        background-color: #4b5563; /* gray-600 */
-      }
-    </style>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Khai phát triển cơ sở</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body, html, #root {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #111827;
+      color: white;
+      font-family: system-ui, sans-serif;
+    }
+  </style>
+
+  <!-- Import map -->
   <script type="importmap">
-{
-  "imports": {
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "@react-three/drei": "https://aistudiocdn.com/@react-three/drei@^10.7.7",
-    "three": "https://aistudiocdn.com/three@0.160.0",
-    "@react-three/fiber": "https://aistudiocdn.com/@react-three/fiber@^9.4.0",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  {
+    "imports": {
+      "react": "https://esm.sh/react@18",
+      "react-dom/client": "https://esm.sh/react-dom@18/client"
+    }
   }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
+  </script>
 </head>
-  <body>
-    <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
+
+<body>
+  <div id="root"></div>
+
+  <!-- React render -->
+  <script type="module">
+    import React from "react";
+    import { createRoot } from "react-dom/client";
+
+    const App = () => (
+      <div class="flex items-center justify-center h-full text-center">
+        <div>
+          <h1 class="text-3xl font-bold mb-4">📦 Khai triển hình khối</h1>
+          <p class="text-gray-300">
+            Trang đã render thành công trên GitHub Pages
+          </p>
+        </div>
+      </div>
+    );
+
+    createRoot(document.getElementById("root")).render(<App />);
+  </script>
 </body>
 </html>
